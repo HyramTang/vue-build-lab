@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import _ from "lodash";
 export default {
   data() {
     return {
@@ -31,6 +32,9 @@ export default {
     },
     dismissed() {
       console.log("Alert dismissed");
+    },
+    sayHello() {
+      console.log(_.merge({ a: "aaa" }, { b: "bbbb" }));
     },
   },
 };
