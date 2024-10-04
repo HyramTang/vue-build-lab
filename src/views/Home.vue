@@ -1,18 +1,44 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <h1>Home page</h1>
+
+    <b-button size="sm" @click="toggle">
+      {{ show ? "Hide" : "Show" }} Alert
+    </b-button>
+    <b-alert v-model="show" class="mt-3" dismissible @dismissed="dismissed">
+      Hello {{ name }}!
+    </b-alert>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
 export default {
-  name: "Home",
-  components: {
-    HelloWorld,
+  data() {
+    return {
+      name: "BootstrapVue",
+      show: true,
+    };
+  },
+  watch: {
+    show(newVal) {
+      console.log("Alert is now " + (newVal ? "visible" : "hidden"));
+    },
+  },
+  methods: {
+    toggle() {
+      console.log("Toggle button clicked");
+      this.show = !this.show;
+    },
+    dismissed() {
+      console.log("Alert dismissed");
+    },
   },
 };
 </script>
+
+<style lang="less">
+.home {
+  max-width: 600px;
+  margin: 0 auto;
+}
+</style>
