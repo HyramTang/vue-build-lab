@@ -1,5 +1,21 @@
+const CompressionWebpackPlugin = require("compression-webpack-plugin");
+
 module.exports = {
   publicPath: "./",
+  configureWebpack: (config) => {
+    if (process.env.NODE_ENV === "production") {
+      config.plugins.push(
+        new CompressionWebpackPlugin({
+          // filename: "[path][base].gz", // 生成的文件名格式：保持原始路径和文件名，并添加 `.gz` 后缀
+          algorithm: "gzip", // 使用 gzip 压缩
+          test: /\.(js|css|html|svg)$/, // 匹配需要压缩的文件类型
+          threshold: 10240, // 只处理大于 10KB 的文件
+          minRatio: 0.8, // 压缩比小于 0.8 的文件才会被处理
+          deleteOriginalAssets: false, // 不删除原始文件
+        })
+      );
+    }
+  },
   chainWebpack: (config) => {
     config.optimization.merge({
       splitChunks: {
