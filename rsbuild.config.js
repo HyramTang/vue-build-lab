@@ -1,11 +1,11 @@
 import { defineConfig } from "@rsbuild/core";
-import { pluginVue2 } from "@rsbuild/plugin-vue2";
+import { pluginVue } from "@rsbuild/plugin-vue";
 
 export default defineConfig({
   html: {
     template: "./public/index.html",
   },
-  plugins: [pluginVue2()],
+  plugins: [pluginVue()],
   source: {
     // 指定入口文件
     entry: {
