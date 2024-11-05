@@ -1,15 +1,10 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import TheHome from "@/views/TheHome.vue";
-import TheRouterView from "@/components/TheRouterView.vue";
-
-Vue.use(VueRouter);
+import { createRouter, createWebHistory } from 'vue-router'
+import TheHome from '@/views/TheHome.vue'
 
 const routes = [
   {
     path: "/",
     redirect: "/home",
-    component: TheRouterView,
     children: [
       {
         path: "home",
@@ -30,8 +25,9 @@ const routes = [
   },
 ];
 
-const router = new VueRouter({
-  routes,
-});
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes
+})
 
 export default router;

@@ -40,4 +40,6 @@ pnpm remove -D @rsbuild/plugin-vue2
 - 引入 pinia
 - 调整 Vue 3 注册方式
 
-5. 
+5. 迁移路由配置 src/router/index.js
+- 调整路由注册方式
+6. 
