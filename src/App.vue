@@ -1,10 +1,10 @@
 <template>
-  <div>
-    <TheHeader></TheHeader>
+  <TheHeader></TheHeader>
+  <router-view v-slot="{ Component }">
     <keep-alive>
-      <router-view></router-view>
+      <component :is="Component" />
     </keep-alive>
-  </div>
+  </router-view>
 </template>
 
 <script setup>

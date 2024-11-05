@@ -42,4 +42,8 @@ pnpm remove -D @rsbuild/plugin-vue2
 
 5. 迁移路由配置 src/router/index.js
 - 调整路由注册方式
-6. 
+
+6. 迁移 src/App.vue 代码
+- 调整路由视图代码
+
+7. 
