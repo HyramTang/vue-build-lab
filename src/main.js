@@ -1,18 +1,17 @@
-import Vue from "vue";
-import App from "./App.vue";
-import router from "./router";
-import store from "./store";
-import Vant from "vant";
-
 import "vant/lib/index.css";
 import "@/assets/style.css";
 
-Vue.config.productionTip = false;
+import { createApp } from 'vue'
+import { createPinia } from 'pinia'
 
-Vue.use(Vant);
+import App from './App.vue'
+import router from './router'
+import Vant from 'vant'
 
-new Vue({
-  router,
-  store,
-  render: (h) => h(App),
-}).$mount("#app");
+const app = createApp(App)
+
+app.use(createPinia())
+app.use(router)
+app.use(Vant)
+
+app.mount('#app')

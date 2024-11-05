@@ -35,4 +35,9 @@ pnpm remove -D @rsbuild/plugin-vue2
 - HTML 内容调整
 - rsbuild.config.js 配置调整
 
-4. 
+4. 迁移 src/main.js
+- 移除 sotre (vuex)
+- 引入 pinia
+- 调整 Vue 3 注册方式
+
+5. 
