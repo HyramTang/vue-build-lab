@@ -46,4 +46,6 @@ pnpm remove -D @rsbuild/plugin-vue2
 6. 迁移 src/App.vue 代码
 - 调整路由视图代码
 
-7. 
+7. 调整 Vant4 不兼容 API
+Vant2 -> Vant 3：https://vant-ui.github.io/vant/#/zh-CN/migrate-from-v2#bu-jian-rong-geng-xin
+Vant3 -> Vant 4：https://vant-ui.github.io/vant/#/zh-CN/migrate-from-v3

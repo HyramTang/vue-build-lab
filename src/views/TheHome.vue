@@ -8,9 +8,9 @@
 </template>
 
 <script setup>
-import { Toast } from "vant";
+import { showToast } from "vant";
 
 const onClickCp03 = () => {
-  Toast("提示内容");
+  showToast("提示内容");
 };
 </script>
