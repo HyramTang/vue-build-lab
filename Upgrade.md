@@ -22,4 +22,10 @@ pnpm add -D @rushstack/eslint-patch
 pnpm add -D @rsbuild/plugin-vue
 pnpm remove -D @rsbuild/plugin-vue2
 ```
-2. 
+2. 调整配置文件
+- 删除 .browserslistrc
+- 删除 .eslintrc.js 添加 .eslintrc.cjs
+- 添加 .prettierrc.json
+- 删除 babel.config.js
+- 添加 jsconfig.json
+3. 
