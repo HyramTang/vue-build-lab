@@ -3,7 +3,8 @@ import { pluginVue } from "@rsbuild/plugin-vue";
 
 export default defineConfig({
   html: {
-    template: "./public/index.html",
+    title:'vue3-upgrade',
+    template: "./index.html",
   },
   plugins: [pluginVue()],
   source: {
